@@ -15,5 +15,7 @@ class PageController extends Controller
         return view('welcome', compact('trains'));
     }
 
+
+
    
 }

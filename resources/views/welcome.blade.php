@@ -16,7 +16,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($trains as $train)
+                    @forelse ($mytime_trains as $train )
                         <tr>
                             <th scope="row">{{ $train->azienda }}</th>
                             <td>{{ $train->stazione_di_partenza }}</td>
@@ -25,7 +25,9 @@
                             <td>{{ $train->codice_treno }}</td>
                             <td>{{ $train->numero_carrozze }}</td>
                         </tr>
-                    @endforeach
+                        @empty
+                        <p>Scusa, non ci sono treni</p>
+                    @endforelse
                 </tbody>
             </table>
         </div>
